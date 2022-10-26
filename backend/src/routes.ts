@@ -1,11 +1,11 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
 
-const routes = Router();
+class Routes {
+	public router: Router;
 
-routes.get("/", (request: Request, response: Response) => {
-	response.status(200).send({
-		message: "hello, world!",
-	});
-});
+	constructor() {
+		this.router = Router();
+	}
+}
 
-export default routes;
+export default new Routes().router;
