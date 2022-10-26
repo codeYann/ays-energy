@@ -1,0 +1,27 @@
+logs/
+*.log
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Git
+.git
+.gitkeep
+.gitignore
+.gitattributes
+.gitmodules
+.cache
+
+# Dotfiles
+.npmignore
+.editorconfig
+.github
+
+# License and readme
+LICENSE
+README*
+
+# Build
+dist
