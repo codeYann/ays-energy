@@ -1,12 +1,7 @@
-import express from "express";
 import dotenv from "dotenv";
-import Routes from "./routes";
+import Server from "./server";
 
-const server = express();
 dotenv.config();
+const app = new Server();
 
-server.use(express.json());
-server.use(Routes);
-server.listen(process.env.PORT, () => {
-	console.log(`Server running on localhost:${process.env.PORT || "3506"}`);
-});
+app.Run(process.env.PORT);
