@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import cors from "cors";
 import Routes from "../routes";
 
@@ -14,11 +14,12 @@ class Server {
 		this.server.use(express.json());
 		this.server.use(Routes);
 		this.server.use(cors());
+		this.server.use(urlencoded({ extended: true }));
 	}
 
-	public Run(port: string | undefined) {
+	public Run(port: number) {
 		this.server.listen(port, () => {
-			console.log("Server running on localhost: ", port);
+			console.log(`Server running on localhost:${port}`);
 		});
 	}
 }
