@@ -1,5 +1,6 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from "../database/config";
+import AuthorsModels from "./authors";
 
 class PostsModel extends Model {}
 
@@ -40,5 +41,9 @@ PostsModel.init(
 		timestamps: true,
 	}
 );
+
+PostsModel.hasMany(AuthorsModels, {
+	foreignKey: "id",
+});
 
 export default PostsModel;
