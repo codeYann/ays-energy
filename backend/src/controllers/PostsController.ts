@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import PostsModel from "../models/posts";
 import { ServerResponseError } from "../utils/internal-error";
+import { sequelize } from "../database/config";
 
 type PostDecoderType = {
 	post_id?: number;
@@ -12,7 +13,7 @@ type PostDecoderType = {
 
 export class PostsController {
 	public async index(
-		request: Request,
+    _: Request,
 		response: Response
 	): Promise<PostsModel[]> {
 		try {
@@ -23,6 +24,7 @@ export class PostsController {
 			throw new ServerResponseError(`Unable to get all posts. ${error}`);
 		}
 	}
+
 	public async store(
 		request: Request,
 		response: Response
@@ -46,6 +48,34 @@ export class PostsController {
 			return newPost;
 		} catch (error) {
 			throw new ServerResponseError(`Unable to create a post. ${error}`);
+		}
+	}
+
+	public async contentByAuthorID(
+		request: Request,
+		response: Response
+	): Promise<PostsModel[]> {
+		try {
+      const {
+        id: authorID
+      } = request.params
+
+			const allPosts = await sequelize.query(
+				`SELECT * FROM posts p 
+         INNER JOIN authors a 
+         ON p.author_id = a.id
+         AND a.id = ${authorID}`,
+				{
+					model: PostsModel,
+				}
+			);
+
+			response.status(200).send(allPosts);
+			return allPosts;
+		} catch (error) {
+			throw new ServerResponseError(
+				`Unable to get all posts of this author. ${error}`
+			);
 		}
 	}
 }
