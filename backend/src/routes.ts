@@ -24,6 +24,7 @@ class Routes {
 	public postsEndPoints() {
 		this.router.get("/post", postsController.index);
 		this.router.post("/post", postsController.store);
+		this.router.get("/post/author/:id", postsController.contentByAuthorID);
 	}
 }
 
