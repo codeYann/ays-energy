@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start:dev": "nodemon",
+		"start": "nodemon",
 		"format": "prettier --write .",
 		"lint": "eslint .",
 		"lint:fix": "npm run lint -- --fix",
