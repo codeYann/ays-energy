@@ -15,7 +15,7 @@ export class AuthorsController {
 			response.status(200).send(authorsList);
 		} catch (error) {
 			throw new ServerResponseError(
-				`Unable to export a list of authors. ${error}`
+				`Unable to export a list of authors. ${error}`,
 			);
 		}
 	}
@@ -47,7 +47,7 @@ export class AuthorsController {
 					where: {
 						id: parseInt(id),
 					},
-				}
+				},
 			);
 
 			response.status(200).send(updatedAuthor);

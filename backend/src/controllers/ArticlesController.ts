@@ -54,13 +54,13 @@ export class ArticlesController {
          AND a.id = ${authorID}`,
 				{
 					model: ArticlesModel,
-				}
+				},
 			);
 
 			response.status(200).send(allArticles);
 		} catch (error) {
 			throw new ServerResponseError(
-				`Unable to get all articles of this author. ${error}`
+				`Unable to get all articles of this author. ${error}`,
 			);
 		}
 	}
