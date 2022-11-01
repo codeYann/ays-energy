@@ -39,7 +39,7 @@ ArticlesModel.init(
 		sequelize,
 		tableName: "articles",
 		timestamps: true,
-	}
+	},
 );
 
 ArticlesModel.hasMany(AuthorsModels, {

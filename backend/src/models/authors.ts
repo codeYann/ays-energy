@@ -33,7 +33,7 @@ AuthorsModels.init(
 		sequelize,
 		tableName: "authors",
 		timestamps: true,
-	}
+	},
 );
 
 export default AuthorsModels;
