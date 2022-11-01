@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { AuthorsController } from "./controllers/AuthorsController";
-import { PostsController } from "./controllers/PostsController";
+import { ArticlesController } from "./controllers/ArticlesController";
 
 const authorsController = new AuthorsController();
-const postsController = new PostsController();
+const articlesController = new ArticlesController();
 
 class Routes {
 	public router: Router;
@@ -11,20 +11,23 @@ class Routes {
 	constructor() {
 		this.router = Router();
 		this.authorsEndPoints();
-		this.postsEndPoints();
+		this.ArticlesEndPoints();
 	}
 
 	public authorsEndPoints(): void {
 		this.router.get("/authors", authorsController.index);
-		this.router.post("/authors", authorsController.store);
-		this.router.delete("/authors", authorsController.delete);
 		this.router.patch("/authors/:id", authorsController.update);
+		this.router.post("/authors/post", authorsController.store);
+		this.router.delete("/authors/delete", authorsController.delete);
 	}
 
-	public postsEndPoints() {
-		this.router.get("/post", postsController.index);
-		this.router.post("/post", postsController.store);
-		this.router.get("/post/author/:id", postsController.contentByAuthorID);
+	public ArticlesEndPoints() {
+		this.router.get("/articles", articlesController.index);
+		this.router.post("/articles/post", articlesController.store);
+		this.router.get(
+			"/articles/author/:id",
+			articlesController.contentByAuthorID
+		);
 	}
 }
 
