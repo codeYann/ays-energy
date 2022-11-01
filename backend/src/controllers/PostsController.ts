@@ -12,23 +12,18 @@ type PostDecoderType = {
 };
 
 export class PostsController {
-	public async index(
-    _: Request,
-		response: Response
-	): Promise<PostsModel[]> {
+  this: null;
+
+	public async index(_: Request, response: Response) {
 		try {
 			const postsList = await PostsModel.findAll();
 			response.status(200).send(postsList);
-			return postsList;
 		} catch (error) {
 			throw new ServerResponseError(`Unable to get all posts. ${error}`);
 		}
 	}
 
-	public async store(
-		request: Request,
-		response: Response
-	): Promise<PostsModel> {
+	public async store(request: Request, response: Response) {
 		try {
 			const {
 				post_title,
@@ -45,20 +40,14 @@ export class PostsController {
 			});
 
 			response.status(200).send(newPost);
-			return newPost;
 		} catch (error) {
 			throw new ServerResponseError(`Unable to create a post. ${error}`);
 		}
 	}
 
-	public async contentByAuthorID(
-		request: Request,
-		response: Response
-	): Promise<PostsModel[]> {
+	public async contentByAuthorID(request: Request, response: Response) {
 		try {
-      const {
-        id: authorID
-      } = request.params
+			const { id: authorID } = request.params;
 
 			const allPosts = await sequelize.query(
 				`SELECT * FROM posts p 
@@ -71,7 +60,6 @@ export class PostsController {
 			);
 
 			response.status(200).send(allPosts);
-			return allPosts;
 		} catch (error) {
 			throw new ServerResponseError(
 				`Unable to get all posts of this author. ${error}`

@@ -9,7 +9,7 @@ type AuthorsDecoderType = {
 };
 
 export class AuthorsController {
-	public async index(request: Request, response: Response): Promise<void> {
+	public async index(_: Request, response: Response) {
 		try {
 			const authorsList = await AuthorsModel.findAll();
 			response.status(200).send(authorsList);
@@ -20,10 +20,7 @@ export class AuthorsController {
 		}
 	}
 
-	public async store(
-		request: Request,
-		response: Response
-	): Promise<AuthorsModel> {
+	public async store(request: Request, response: Response) {
 		try {
 			const { name, email }: AuthorsDecoderType = request.body;
 
@@ -33,16 +30,12 @@ export class AuthorsController {
 			});
 
 			response.status(201).send(newAuthor);
-			return newAuthor;
 		} catch (error) {
 			throw new ServerResponseError(`Unable to create an author. ${error}`);
 		}
 	}
 
-	public async update(
-		request: Request,
-		response: Response
-	): Promise<[affectedCount: number]> {
+	public async update(request: Request, response: Response) {
 		try {
 			const id = request.params["id"];
 
@@ -58,13 +51,12 @@ export class AuthorsController {
 			);
 
 			response.status(200).send(updatedAuthor);
-			return updatedAuthor;
 		} catch (error) {
 			throw new ServerResponseError(`Unable to update an author. ${error}`);
 		}
 	}
 
-	public async delete(request: Request, response: Response): Promise<number> {
+	public async delete(request: Request, response: Response) {
 		try {
 			const { id }: { id: string } = request.body;
 
@@ -74,10 +66,7 @@ export class AuthorsController {
 				},
 			});
 
-			console.log(request.body);
-
-			response.status(200).send({ id });
-			return removedAuthor;
+			response.status(200).send({ removedAuthor });
 		} catch (error) {
 			throw new ServerResponseError(`Unable to delete an author. ${error}`);
 		}
