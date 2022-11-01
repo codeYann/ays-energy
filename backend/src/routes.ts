@@ -26,7 +26,7 @@ class Routes {
 		this.router.post("/articles/post", articlesController.store);
 		this.router.get(
 			"/articles/author/:id",
-			articlesController.contentByAuthorID
+			articlesController.contentByAuthorID,
 		);
 	}
 }
