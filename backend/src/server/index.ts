@@ -12,9 +12,9 @@ class Server {
 
 	private middleware() {
 		this.server.use(express.json());
-		this.server.use(Routes);
 		this.server.use(cors());
 		this.server.use(urlencoded({ extended: true }));
+		this.server.use(Routes);
 	}
 
 	public Run(port: number) {
