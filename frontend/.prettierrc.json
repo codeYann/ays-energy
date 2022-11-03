@@ -1,0 +1,9 @@
+{
+	"singleQuote": true,
+	"useTabs": true,
+	"tabWidth": 1,
+	"trailingComma": "all",
+	"bracketSpacing": false,
+	"jsxSingleQuote": true,
+	"arrowParens": "avoid"
+}
