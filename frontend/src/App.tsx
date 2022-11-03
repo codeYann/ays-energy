@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return <div>ola mundo</div>;
+	return <div className='app'>ola mundo</div>;
 }
 
 export default App;
