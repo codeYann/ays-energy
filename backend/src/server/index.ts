@@ -7,12 +7,12 @@ class Server {
 
 	constructor() {
 		this.server = express();
-		this.middleware();
+		this.middlewares();
 	}
 
-	private middleware() {
-		this.server.use(express.json());
+	private middlewares() {
 		this.server.use(cors());
+		this.server.use(express.json());
 		this.server.use(urlencoded({ extended: true }));
 		this.server.use(Routes);
 	}
