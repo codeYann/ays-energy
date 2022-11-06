@@ -16,5 +16,5 @@ module.exports = {
 		}),
 
 	down: async (queryInterface, Sequelize) =>
-		queryInterface.removeConstraint("articles", "author_id_foreign_key"),
+		queryInterface.removeConstraint("articles", "author_id_foreign_key_articles"),
 };
