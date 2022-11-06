@@ -1,11 +1,13 @@
 import { Request, Response } from "express";
 import AuthorsModel from "../models/authors";
 import { ServerResponseError } from "../utils/internal-error";
+import { Encryption } from "../utils/encrypt";
 
 type AuthorsDecoderType = {
 	id?: number;
 	name: string;
 	email: string;
+	password: string;
 };
 
 export class AuthorsController {
@@ -14,19 +16,25 @@ export class AuthorsController {
 			const authorsList = await AuthorsModel.findAll();
 			response.status(200).send(authorsList);
 		} catch (error) {
-			throw new ServerResponseError(
-				`Unable to export a list of authors. ${error}`,
-			);
+			throw new ServerResponseError(`Unable to export a list of authors. ${error}`);
 		}
 	}
 
 	public async store(request: Request, response: Response) {
 		try {
-			const { name, email }: AuthorsDecoderType = request.body;
+			const { name, email, password }: AuthorsDecoderType = request.body;
+
+			if (!password) {
+				response.status(205).send({ message: `Password wasn't informed` });
+			}
+
+			const hashPass = new Encryption(password);
+			const newPassword = await hashPass.generateHash();
 
 			const newAuthor = await AuthorsModel.create({
 				name,
 				email,
+				password: newPassword,
 			});
 
 			response.status(201).send(newAuthor);
