@@ -16,3 +16,11 @@ export class ServerResponseError extends InternalError {
 		super(`${internalMessage}. ${message}`);
 	}
 }
+
+export class EncryptionError extends InternalError {
+	constructor(message: string) {
+		const encryptionInternalMessage =
+			"Unexpected error when trying to encrypt a password";
+		super(`${encryptionInternalMessage}. ${message}`);
+	}
+}
