@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {CssBaseline} from '@mui/material';
-import Login from './components/Login';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
 	{
