@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../../util/main-image.jpg"
 
 import MainPost from "./main-post";
 import GridPost from "./cells-post";
 import BiggerPost from "./bigger-post";
+import FeedPost from "./feed-post";
 
 import './style.css'
 
 export default function HomeContent(){
+    
+    let [seeMore, setChangeText] = useState(false);
+    const handleChange = () => {
+    return setChangeText(!seeMore);
+       
+    
+    };
+
     return(
         <div className="home-screen">
             <div className="initial-content">
@@ -32,7 +41,20 @@ export default function HomeContent(){
                 <BiggerPost />
             </div>
 
-            <button class="btn">See More <i class="fa-solid fa-circle-arrow-down"></i></button>
+            {seeMore &&
+            <div className="feed-post">
+                <FeedPost />
+            </div>
+            }
+
+            {!seeMore &&
+            <button onClick={() => handleChange()}>See More <i class="fa-solid fa-circle-arrow-down"></i></button>}
+
+              
+                
+            
+            
         </div>
     );
+
 }

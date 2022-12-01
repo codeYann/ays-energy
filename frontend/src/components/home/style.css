@@ -72,3 +72,7 @@
     height: 500px;
     background: linear-gradient(180deg, rgba(56, 154, 247, 0.1) 0%, rgba(56, 154, 247, 0) 100%);
 }
+
+.feed-post{
+    margin-top: 43px;
+}
