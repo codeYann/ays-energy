@@ -1,22 +1,20 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import gato from "../../../util/gato-fofo.jpg"
-
 import './style.css'
 
-export default function BiggerPost(){
+export default function BiggerPost({post}){
     return(
         <div className="bigger-container">
             <div>
-                <img src={gato} alt="" />
+                <img src={post.image_link} alt="" />
             </div>
             <div className="bigger-content">
                 <Link className="link" to={"#"}>
-                    <h2>Post Title</h2>
+                    <h2>{post.title}</h2>
                 </Link>
-                <p>Lorem ipsum vel est quisque venenatis ullamcorper interdum netus habitant pretium placerat accumsan pulvinar non turpis, adipiscing orci erat ut conubia vel dictumst venenatis vitae cras venenatis dapibus senectus duis.</p>
-                <time>12 de Maio de 2022</time>
+                <p>{post.content}</p>
+                <time>{post.date}</time>
             </div>
         </div>
     );
