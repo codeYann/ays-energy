@@ -37,6 +37,10 @@
     color: #718096;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .content{
     margin: 18px 25px 24px 17px;
     display: flex;
@@ -55,6 +59,10 @@
     /* 800 */
 
     color: #2D3748;
+}
+
+.content h3:hover, .content h3:focus{
+    color: #389AF7; 
 }
 
 .content p{

@@ -7,6 +7,10 @@
     height: 500px;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .bigger-content{
     flex-grow: 2;
     padding: 43px 201px 60px 70px;
@@ -22,6 +26,10 @@
     line-height: 48px;
 
     color: #000000;
+}
+
+.bigger-content h2:hover, .bigger-content h2:focus{
+    color: #389AF7; 
 }
 
 .bigger-content p{
