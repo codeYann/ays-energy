@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react';
+import HomeContent from '../../components/home';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
 
-import HomeContent from "../../components/home";
-
-export default function Home(){
-    return(
-        <div>
-            <HomeContent seeMore={false}/>
-        </div>
-    );
+export default function Home() {
+  return (
+    <div>
+      <Navbar />
+      <HomeContent seeMore={false} />
+      <Footer />
+    </div>
+  );
 }
