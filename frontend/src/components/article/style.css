@@ -1,0 +1,49 @@
+.title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 36px;
+    width: 900px; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 0;
+}
+.title h1{
+    text-align: center;
+}
+.title p{
+    width: 900px;
+    margin-top: 10px;
+}
+
+.subtitle div {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.subtitle p{
+    color: gray;
+    font-size: 18px;
+}
+
+.text{
+    color: gray;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid gainsboro;
+}
+
+.title img{
+    width: 917px;
+    height: 358px;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+}
