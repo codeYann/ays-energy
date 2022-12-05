@@ -1,0 +1,31 @@
+.navbar-dashboard {
+  display: flex;
+  flex-flow: row wrap;
+  background: #3861f7;
+  justify-content: space-between;
+}
+
+.navbar-dashboard .navbar-dashboard-header {
+  display: flex;
+  flex-flow: row wrap;
+  color: #fff;
+  margin-left: 5%;
+}
+
+.navbar-dashboard .navbar-dashboard-menu {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5px;
+  align-items: center;
+  margin-right: 10%;
+  justify-content: space-between;
+}
+
+.navbar-dashboard .navbar-dashboard-menu .navbar-dashboard-menu-icon {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.navbar-dashboard .navbar-dashboard-menu .navbar-dashboard-menu-avatar {
+  border: 1px solid #000;
+}

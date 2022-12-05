@@ -1,78 +1,86 @@
-.home-screen{
-    margin: 100px 90px;
+.home-screen {
+  margin: 100px 90px;
 }
 
-.home-screen button{
-    margin-top: 31px;
-    position: absolute;
-    width: 122px;
-    height: 37px;
-    right: 90px;
+.home-screen button {
+  margin-top: 31px;
+  position: absolute;
+  width: 122px;
+  height: 37px;
+  right: 90px;
 
-    border: 0px;
-    background: #3861F7;
-    border-radius: 5px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
+  border: 0px;
+  background: #3861f7;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
-.home-screen i{
-    width: 20px;
+.home-screen i {
+  width: 20px;
 }
 
-.initial-content{
-    padding-left: 72px; 
-    display: flex;
-    justify-content: space-between;
+.initial-content {
+  padding-left: 72px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.initial-content img{
-    width: 382px;
-    height: 382px;
+.initial-content img {
+  width: 382px;
+  height: 382px;
 }
 
-.message h1{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 73px;
+.message h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
 
-    color: #000000;
+  color: #000000;
 }
 
-.message p{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
+.message p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
 
-    color: #4A5568;
+  color: #4a5568;
 }
 
-.initial-post{
-    margin-top: 107px;
-    height: 245px;
+.initial-post {
+  margin-top: 107px;
+  height: 245px;
 
-    background: linear-gradient(180deg, rgba(56, 154, 247, 0.1) 0%, rgba(56, 154, 247, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(56, 154, 247, 0.1) 0%,
+    rgba(56, 154, 247, 0) 100%
+  );
 }
 
-.cells-post{
-    margin-top: 43px;
+.cells-post {
+  margin-top: 43px;
 }
 
-.last-post{
-    margin-top: 43px;
-    height: 500px;
-    background: linear-gradient(180deg, rgba(56, 154, 247, 0.1) 0%, rgba(56, 154, 247, 0) 100%);
+.last-post {
+  margin-top: 43px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 154, 247, 0.1) 0%,
+    rgba(56, 154, 247, 0) 100%
+  );
 }
 
-.feed-post{
-    margin-top: 43px;
+.feed-post {
+  margin-top: 43px;
 }

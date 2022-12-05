@@ -1,19 +1,18 @@
-
 .footer {
-    display: flex;
-    justify-content: space-between;
-    
-    margin: 43px 0px 27px 0px;
-    padding-left: 93px;
-    padding-top: 29px;
+  display: flex;
+  justify-content: space-between;
 
-    border-top: 1px solid #E8E8E8;
+  margin: 43px 0px 27px 0px;
+  padding-left: 93px;
+  padding-top: 29px;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+  border-top: 1px solid #e8e8e8;
 
-    color: #000000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
 }
