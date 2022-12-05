@@ -11,9 +11,9 @@ export default function MainPost({post}){
             </div>
             <div className="post-content">
                 <Link className="link" to={"#"}>
-                    <h2>{post.title}</h2>
+                    <h2 className="title">{post.title}</h2>
                 </Link>
-                <p>{post.content}</p>
+                <p className="description">{post.content}</p>
             </div>
         </div>
     );

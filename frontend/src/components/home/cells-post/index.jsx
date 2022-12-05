@@ -10,9 +10,9 @@ export default function GridPost({post}){
                 <img src={post[0].image_link} alt="" />
                 <div className="content">
                     <Link className="link" to={"#"}>
-                        <h3>{post[0].title}</h3>
+                        <h3 className="title">{post[0].title}</h3>
                     </Link>
-                    <p>{post[0].content}</p>
+                    <p className="description">{post[0].content}</p>
                     <time>{post[0].date}</time>
                 </div>  
             </div>
@@ -21,9 +21,9 @@ export default function GridPost({post}){
                 <img src={post[1].image_link} alt="" />
                 <div className="content">
                     <Link className="link" to={"#"}>
-                        <h3>{post[1].title}</h3>
+                        <h3 className="title">{post[1].title}</h3>
                     </Link>
-                    <p>{post[1].content}</p>
+                    <p className="description">{post[1].content}</p>
                     <time>{post[1].date}</time>
                 </div> 
             </div>
@@ -31,9 +31,9 @@ export default function GridPost({post}){
                 <img src={post[2].image_link} alt="" />
                 <div className="content">
                     <Link className="link" to={"#"}>
-                        <h3>{post[2].title}</h3>
+                        <h3 className="title">{post[2].title}</h3>
                     </Link>
-                    <p>{post[2].content}</p>
+                    <p className="description">{post[2].content}</p>
                     <time>{post[2].date}</time>
                 </div>   
             </div>

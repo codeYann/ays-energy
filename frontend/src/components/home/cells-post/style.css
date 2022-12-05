@@ -24,21 +24,12 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
     border-bottom: 0px;
-    font-family: 'Inter';
-    font-style: normal;
+
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
-
-
-    /* 600 */
 
     color: #718096;
-}
-
-.link{
-    text-decoration: none;
 }
 
 .content{
@@ -49,41 +40,14 @@
     align-content: space-between;
 }
 
-.content h3{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-
-    /* 800 */
-
-    color: #2D3748;
-}
-
-.content h3:hover, .content h3:focus{
-    color: #389AF7; 
-}
-
 .content p{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
     padding-top: 15px;
     padding-bottom: 22px;
 
     height: 46px;
-
-    /* 600 */
-
-    color: #718096;
 }
 
 .content time{
     position: absolute;
     bottom: 24px;
 }
-

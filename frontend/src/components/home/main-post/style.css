@@ -7,10 +7,6 @@
     height: 243px;
 }
 
-.link{
-    text-decoration: none;
-}
-
 .post-content{
     flex-grow: 2;
     padding: 61px 201px 60px 70px;
@@ -18,30 +14,4 @@
 
 .post-content h2{
     padding-bottom: 15px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    
-    /* 800 */
-    
-    color: #2D3748;
-}
-
-.post-content h2:hover, .post-content h2:focus{
-    color: #389AF7; 
-}
-
-.post-content p{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
-    /* 600 */
-
-    color: #718096; 
 }

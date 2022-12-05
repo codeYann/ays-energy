@@ -1,3 +1,8 @@
+*{
+    font-family: 'Inter';
+    font-style: normal;
+}
+
 .home-screen{
     margin: 100px 90px;
 }
@@ -75,4 +80,26 @@
 
 .feed-post{
     margin-top: 43px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+h3:hover, h3:focus, h2:hover, h2:focus{
+    color: #389AF7; 
+}
+
+.title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2D3748;
+}
+
+.description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #718096;
 }

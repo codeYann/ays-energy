@@ -7,10 +7,6 @@
     height: 500px;
 }
 
-.link{
-    text-decoration: none;
-}
-
 .bigger-content{
     flex-grow: 2;
     padding: 43px 201px 60px 70px;
@@ -19,8 +15,6 @@
 .bigger-content h2{
     padding-bottom: 24px;
 
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -28,14 +22,8 @@
     color: #000000;
 }
 
-.bigger-content h2:hover, .bigger-content h2:focus{
-    color: #389AF7; 
-}
-
 .bigger-content p{
     padding-bottom: 31px;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -44,8 +32,6 @@
 }
 
 .bigger-content time{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;

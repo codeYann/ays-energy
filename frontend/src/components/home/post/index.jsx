@@ -9,9 +9,9 @@ export default function Post({post}){
                 <img src={post.image_link} alt="" />
                 <div className="content">
                     <Link className="link" to={"#"}>
-                        <h3>{post.title}</h3>
+                        <h3 className="title">{post.title}</h3>
                     </Link>
-                    <p>{post.content}</p>
+                    <p className="description">{post.content}</p>
                     <time>{post.date}</time>
                 </div>  
             </div>
