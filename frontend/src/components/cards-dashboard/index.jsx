@@ -1,27 +1,58 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
+import './index.css';
 
-export default function MediaCard() {
+function CustomCard({
+  headerName,
+  text,
+  buttonName,
+  buttonColor,
+  redirectTo,
+  color,
+}) {
+  const navigate = useNavigate();
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <Box width="300px">
+      <Card>
+        <Box
+          component="div"
+          sx={{ height: 120, background: color }}
+        />
+        <CardContent>
+          <Typography variant="h5" component="div">
+            {headerName}
+          </Typography>
+          <p className="card-text">{text}</p>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant="outlined"
+            onClick={() => navigate(`/${redirectTo}`)}
+            color={buttonColor}
+            size="small"
+          >
+            {buttonName}
+          </Button>
+        </CardActions>
+      </Card>
+    </Box>
   );
 }
+
+CustomCard.propTypes = {
+  headerName: PropTypes.string,
+  text: PropTypes.string,
+  buttonName: PropTypes.string,
+  buttonColor: PropTypes.string,
+  redirectTo: PropTypes.string,
+  color: PropTypes.string,
+};
+
+export default CustomCard;
