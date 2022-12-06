@@ -4,6 +4,9 @@ import { CssBaseline } from '@mui/material';
 import Home from './pages/home';
 import DashBoard from './pages/dashboard';
 import LoginDashBoard from './components/login-dashboard';
+import CreateArticle from './pages/createArticles';
+import ListArticles from './pages/listArticles';
+import RemoveArticles from './pages/removeArticles';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <DashBoard />,
+  },
+  {
+    path: '/dashboard/create',
+    element: <CreateArticle />,
+  },
+  {
+    path: '/dashboard/list',
+    element: <ListArticles />,
+  },
+  {
+    path: '/dashboard/remove',
+    element: <RemoveArticles />,
   },
 ]);
 
