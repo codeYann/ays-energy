@@ -11,7 +11,7 @@ class Server {
 	}
 
 	private middlewares() {
-		this.server.use(cors());
+    this.server.use(cors({origin: '*'}));
 		this.server.use(express.json());
 		this.server.use(urlencoded({ extended: true }));
 		this.server.use(Routes);
