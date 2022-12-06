@@ -1,0 +1,10 @@
+.table-container .table-head {
+  background-color: #000;
+}
+
+.table-container .table-head .table-cell {
+  color: #fff;
+}
+.table-container .table-row:nth-child(even){
+  background-color: #e3e3e5;;
+}

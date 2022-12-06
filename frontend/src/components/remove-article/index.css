@@ -1,0 +1,10 @@
+.table-remove-container .table-remove-head {
+  background-color: #000;
+}
+
+.table-remove-container .table-remove-head .table-remove-cell {
+  color: #fff;
+}
+.table-remove-container .table-row:nth-child(even){
+  background-color: #e3e3e5;;
+}

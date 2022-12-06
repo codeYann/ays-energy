@@ -1,0 +1,11 @@
+.container-article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 2.5%;
+}
+
+.article-content {
+  font-size: 13pt;
+  font-family: 'Roboto sans';
+}
