@@ -1,38 +1,50 @@
+import PropType from 'prop-types';
 import React from 'react';
 import './index.css';
 import LogoutIcon from '@mui/icons-material/Logout';
 import HomeIcon from '@mui/icons-material/Home';
-import BasicCard from '../cards-dashboard';
+import { useNavigate } from 'react-router-dom';
 
-export default function Container() {
+function Container({ Children }) {
+  const navigate = useNavigate();
+
+  const redirectHomeHandler = (event) => {
+    event.preventDefault();
+    navigate('/dashboard');
+  };
+
+  const redirectLoginHandler = (event) => {
+    event.preventDefault();
+    navigate('/login');
+  };
+
   return (
     <div className="container-dashboard">
       <aside className="container-drawer">
         <ul>
           <li>
-            <a href="#_">
+            <button type="button" onClick={redirectHomeHandler}>
               <HomeIcon className="container-drawer-icon" />
               Home
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#blank">
+            <button type="button" onClick={redirectLoginHandler}>
               <LogoutIcon className="container-drawer-icon" />
               Logout
-            </a>
+            </button>
           </li>
         </ul>
       </aside>
       <main className="container-main">
-        <div className="container-main-first-row">
-          <BasicCard />
-          <BasicCard />
-        </div>
-        <div className="container-main-second-row">
-          <BasicCard />
-          <BasicCard />
-        </div>
+        <Children />
       </main>
     </div>
   );
 }
+
+Container.propTypes = {
+  Children: PropType.objectOf(React.Component),
+};
+
+export default Container;
