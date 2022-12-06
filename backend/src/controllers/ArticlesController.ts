@@ -33,7 +33,7 @@ export class ArticlesController {
 			const newArticle = await ArticlesModel.create({
 				article_title,
 				article_content,
-				image_link: image_link ? image_link : "",
+				image_link: image_link ? image_link : "http://source.unsplash.com/random",
 				author_id,
 			});
 
@@ -62,6 +62,20 @@ export class ArticlesController {
 			throw new ServerResponseError(
 				`Unable to get all articles of this author. ${error}`,
 			);
+		}
+	}
+	public async remove(request: Request, response: Response) {
+		try {
+			const { article_id }: { article_id: number } = request.body;
+      console.log(article_id);
+			const removeArticle = await ArticlesModel.destroy({
+				where: {
+					article_id,
+				},
+			});
+			response.status(200).send(removeArticle);
+		} catch (error) {
+			throw new ServerResponseError(`Unalbe to remove this article. ${error}`);
 		}
 	}
 }
