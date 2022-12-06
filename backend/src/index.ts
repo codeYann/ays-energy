@@ -4,4 +4,4 @@ import Server from "./server";
 dotenv.config();
 const app = new Server();
 
-app.Run(6666);
+app.Run(3333);
