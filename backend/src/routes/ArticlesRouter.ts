@@ -11,6 +11,7 @@ class ArticlesRouter {
 		this.router.get("/", articlesController.index);
 		this.router.post("/", articlesController.store);
 		this.router.get("/author/:id", articlesController.contentByAuthorID);
+		this.router.delete("/", articlesController.remove);
 	}
 }
 
